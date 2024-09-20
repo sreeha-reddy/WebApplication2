@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Customer>
+
+<h2>Customers</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Name</td>
+                <td>@customer.Email</td>
+                <td><a asp-action="Details" asp-route-id="@customer.Id">View Details</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

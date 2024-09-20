@@ -1,0 +1,19 @@
+﻿@model WebApplication2.Models.FileUpload
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">VES SITE CREATION</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-6">
+                <label asp-for="FileName"></label>
+                <input type="file" name="file" value="VES FileUpload" class="form-control" accept=".xls;.csv" />
+            </div>
+            <div class="col-md-6">
+                <input type="submit" class="btn btn-primary" value="Upload File" />
+            </div>
+        </div>
+    </form>
+</div>
